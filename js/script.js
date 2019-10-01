@@ -54,6 +54,16 @@ function init(resultFromServer){
   windSpeedElement.innerHTML='Winds at' + Math.floor(resultFromServer.wind.speed) + 'm/s';
   cityHeader.innerHTML=resultFromServer.name;
   humidityElement.innerHTML='Humidity levels at' + resultFromServer.main.humidity + '%';
+
+  setPositionForWeatherInfo();
+}
+function setPositionForWeatherInfo{
+    let weatherContainer=document.getElementById('weatherContainer');
+    let weatherContainerHeight=weatherContainer.clientHeight;
+    let weatherContainerWidth=weatherContainer.clientWidth;
+    weatherContainer.style.left=`calc(50% -${weatherContainerWidth/2}px)`;
+    weatherContainer.style.top=`calc(50% - ${weatherContainerHeight/1.3}px)`;
+    weatherContainer.style.visibility='visible';
 }
 //  click event trigger when user clicks on search button and value is transfered to searchWeather function
 document.getElementById('searchBtn').addEventListener('click',()=>{
