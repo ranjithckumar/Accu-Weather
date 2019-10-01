@@ -57,7 +57,7 @@ function init(resultFromServer){
 
   setPositionForWeatherInfo();
 }
-function setPositionForWeatherInfo{
+function setPositionForWeatherInfo(){
     let weatherContainer=document.getElementById('weatherContainer');
     let weatherContainerHeight=weatherContainer.clientHeight;
     let weatherContainerWidth=weatherContainer.clientWidth;
